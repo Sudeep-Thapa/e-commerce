@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'cart',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -119,8 +122,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL= '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
+
+EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST:'smtp.gmail.com'
+EMAIL_PORT: 587
+EMAIL_USER:'sudeepthapa2511@gmail.com'
+EMAIL_HOST_PASSWORD:'Whysoserious@12'
+EMAIL_USE_TLS: True
+EMAIL_USE_SSL: False
